@@ -305,11 +305,13 @@ if ($accepta_condicions) {
 
 Fes un pàgina que tingui una variable que es digui ceba. Quan aquesta variable és true, mostra aquest video https://youtu.be/i7yyMbQkEhc, i quan és false, aquest https://youtu.be/qN0AGcxGvhg
 
+[Aquest enllaç et mostra com afegir un video youtube a la teva pàgina](https://como.help/programacion/html/como-insertar-un-video-de-youtube-en-html)
+
 ## exercici4.php
 
 Explora la comanda `$d = date("D");`. Et mostra el dia de la setmana que hi som en anglés. Els valors que retorna són: `Sun Mon Tue Wed Thu Fri Sat`.
 
-Fes un programa que mostri un missatge com `Avui és divendres` si avui és divendres, i si avui és dilluns que digui `Avui és dilluns`.
+Fes una pàgina que mostri un missatge com `Avui és divendres` si avui és divendres, i si avui és dilluns que digui `Avui és dilluns`.
 
 Fes també que el missatge si és cap de setmana digui, per exemple, `Avui és dissabte i no hi ha classe!`.
 
@@ -324,10 +326,108 @@ echo "He llençat un dau i ha sortit: $dau";
 
 ## exercici5.php
 
-Modifica l'exemple anterior per a que mostri el número escrit, és a dir, no ha de dir `He llençat un dau i ha sortit: 3`, ha de dir `He llençat un dau i ha sortit el tres`.
+Modifica l'exemple anterior per a que mostri el número escrit, és a dir, no ha de dir
+
+`He llençat un dau i ha sortit: 3`
+
+ha de dir
+
+`He llençat un dau i ha sortit el tres`.
 
 Afegeix un enllaç a la pàgina per a que torni a executar-se el teu script. Ha de ser un enllaç a la teva pròpia pàgina.
 
 ## Bucles
 
-https://www-tutorialrepublic-com.translate.goog/php-tutorial/php-loops.php?_x_tr_sl=en&_x_tr_tl=ca&_x_tr_hl=ca&_x_tr_pto=wapp
+Els bucles s'utilitzen per executar el mateix bloc de codi una vegada i una altra, sempre que es compleixi una determinada condició. La idea bàsica darrere d'un bucle és automatitzar les tasques repetitives dins d'un programa per estalviar temps i esforç.
+
+PHP admet quatre tipus diferents de bucles.
+
+* while: fa un bucle a través d'un bloc de codi sempre que la condició especificada s'avaluï com a vertadera.
+* do ... while: el bloc de codi executat una vegada i després s'avalua la condició. Si la condició és certa, la declaració es repeteix sempre que la condició especificada sigui certa.
+* for: recorre un bloc de codi fins que el comptador arriba a un número especificat.
+* foreach: recorre un bloc de codi per a cada element d'una llista.
+
+## FOR
+
+El bucle `for` repeteix un bloc de codi sempre que es compleixi una determinada condició. Normalment s'utilitza per executar un bloc de codi un nombre determinat de vegades.
+
+```text
+for(inicialització; condició; increment){
+    // Codi a executar
+}
+```
+
+Exemple:
+
+```php
+<?php
+for($i=1; $i<=3; $i = $i + 1){
+    echo "The number is " . $i . "<br>";
+}
+?>
+```
+
+## exercici6.php
+
+Repeteix l'exercici de la taula de multiplicar però fent servir un bucle for.
+
+## exercici7.php
+
+Fes una pàgina on es calculi un valor aleatori entre 1 i 100 i es mostri per pantalla tots els números del 1 fins al valor aleatori. És a dir, que si surt el 6, es mostrin els números del 1 al 6.
+
+## exercici8.php
+
+Observa aquest exemple, on hi ha un bucle dins d'un altre bucle:
+
+```php
+<?php
+for($i=1; $i<=3; $i++){
+    for($j=1; $j<=3; $j++){
+        suma = $i + $j;
+        echo "$i + $j = $suma";
+    }
+}
+?>
+```
+
+Ara fes una pàgina que mostri totes les taules de multiplicar de l'1 al 10.
+
+## FOREACH
+
+El bucle foreach s'utilitza per iterar sobre llistes.
+
+```text
+foreach ($array com a $valor){
+    // Codi a executar
+}
+```
+
+Exemple:
+
+```php
+<?php
+$colors = array("red", "green", "blue");
+ 
+// Loop through colors array
+foreach($colors as $value){
+    echo $value . "<br>";
+}
+?>
+```
+
+## exercici9.php
+
+Modifica l'exemple anterior per a que mostri una llista numerada dels colors.
+
+Desprès, fes que cada element de la llista es mostri del color que correspon. Per exemple, que red es mostri amb text vermell.
+
+## exercici10.php
+
+Crea una llista amb les 4 URLs de la wikipedia següents:
+
+* https://ca.wikipedia.org/wiki/Barcelona
+* https://ca.wikipedia.org/wiki/Tarragona
+* https://ca.wikipedia.org/wiki/Lleida
+* https://ca.wikipedia.org/wiki/Girona
+
+Fes una pàgina que mostri les 4 URLs de la llista en forma d'enllaç.
